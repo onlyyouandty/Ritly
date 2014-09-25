@@ -1,0 +1,9 @@
+<!-- link.html.erb -->
+<% flash.each do |name, msg| %>
+<%= content_tag :div, msg %>
+<% end %>
+
+<%= form_for @url do |f| %>	
+	<%= f.text_field :url %>
+	<%= f.submit "Submit" %>
+<% end %>
