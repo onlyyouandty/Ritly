@@ -1,4 +1,6 @@
 <!-- show.html.erb -->
-<% flash.each do |url| %>
-<%=  %>
-<% end %>
+<h1>Here is your shortened url</h1>
+<p>
+	<p><%= @url.url %></p>
+	<h2><%= @url.short_url = SecureRandom.urlsafe_base64 %></h2> 
+</p>

@@ -1,11 +1,11 @@
 class UrlsController < ApplicationController
-	# before_action :load_url, only: [:edit, :show, :update, :destroy]
 
 	def index
     end
 
     def show
 		@url = Url.find(params[:id])
+		puts "Hi"
 	end
 
 	def new
@@ -17,6 +17,7 @@ class UrlsController < ApplicationController
 		if @url.save
 			#success
 			redirect_to url_path(@url)
+
 		else
 			render 'new'
 		end
